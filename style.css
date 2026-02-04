@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #F4F7F6 0%, #FFFFFF 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #0A1A3C;
+    font-size: 28px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #6c757d;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #0A1A3C;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #4169E1;
+    box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.1);
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4169E1 0%, #0056b3 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(65, 105, 225, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: #E8EAED;
+    color: #0A1A3C;
+}
+
+.btn-secondary:hover {
+    background: #d4d7dc;
+}
+
+.resultado-container {
+    margin-top: 30px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.resultado-container.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.resultado-box {
+    background: linear-gradient(135deg, #0A1A3C 0%, #1a3a52 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resultado-label {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.resultado-numero {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.classificacao-box {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    background: #F4F7F6;
+}
+
+.classificacao-label {
+    font-size: 12px;
+    color: #6c757d;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.classificacao-texto {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A1A3C;
+}
+
+.classificacao-box.abaixo-peso {
+    background: #D6E8F7;
+    border-color: #4169E1;
+}
+
+.classificacao-box.abaixo-peso .classificacao-texto {
+    color: #0056b3;
+}
+
+.classificacao-box.peso-normal {
+    background: #D1E8D8;
+    border-color: #2d7a4a;
+}
+
+.classificacao-box.peso-normal .classificacao-texto {
+    color: #1a4d2e;
+}
+
+.classificacao-box.sobrepeso {
+    background: #FBE5CC;
+    border-color: #D97706;
+}
+
+.classificacao-box.sobrepeso .classificacao-texto {
+    color: #B45309;
+}
+
+.classificacao-box.obesidade-i {
+    background: #FBD9CC;
+    border-color: #DC2626;
+}
+
+.classificacao-box.obesidade-i .classificacao-texto {
+    color: #991b1b;
+}
+
+.classificacao-box.obesidade-ii {
+    background: #FECACA;
+    border-color: #DC2626;
+}
+
+.classificacao-box.obesidade-ii .classificacao-texto {
+    color: #991b1b;
+}
+
+.classificacao-box.obesidade-iii {
+    background: #FCA5A5;
+    border-color: #7f1d1d;
+}
+
+.classificacao-box.obesidade-iii .classificacao-texto {
+    color: #4b0000;
+}
+
+.info-box {
+    background: #F4F7F6;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 1px solid #d4d7dc;
+}
+
+.info-box h3 {
+    font-size: 14px;
+    color: #0A1A3C;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.tabela-imc {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.tabela-imc tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabela-imc tr:last-child {
+    border-bottom: none;
+}
+
+.tabela-imc td {
+    padding:0A1A3C;
+}
+
+.tabela-imc td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.tabela-imc td:last-child {
+    text-align: right;
+    color: #6c757d right;
+    color: #999;
+    font-size: 12px;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .card {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .resultado-numero {
+        font-size: 36px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

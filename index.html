@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Calculadora de IMC</h1>
+            <p class="subtitle">Índice de Massa Corporal</p>
+
+            <form id="formulario-imc">
+                <div class="form-group">
+                    <label for="peso">Peso (kg)</label>
+                    <input 
+                        type="number" 
+                        id="peso" 
+                        placeholder="Digite seu peso em kg" 
+                        step="0.1"
+                        min="0"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="altura">Altura (m)</label>
+                    <input 
+                        type="number" 
+                        id="altura" 
+                        placeholder="Digite sua altura em metros" 
+                        step="0.01"
+                        min="0"
+                        required
+                    >
+                </div>
+
+                <div class="button-group">
+                    <button type="button" id="btn-calcular" class="btn btn-primary">
+                        Calcular IMC
+                    </button>
+                    <button type="button" id="btn-limpar" class="btn btn-secondary">
+                        Limpar
+                    </button>
+                </div>
+            </form>
+
+            <div id="resultado-container" class="resultado-container hidden">
+                <div class="resultado-box">
+                    <p class="resultado-label">Seu IMC</p>
+                    <p class="resultado-numero" id="resultado-imc">--</p>
+                </div>
+
+                <div class="classificacao-box" id="classificacao-box">
+                    <p class="classificacao-label">Classificação</p>
+                    <p class="classificacao-texto" id="classificacao-texto">--</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
